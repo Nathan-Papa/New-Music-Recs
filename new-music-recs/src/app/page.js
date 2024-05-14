@@ -30,7 +30,7 @@ export default function Home() {
         A new way to keep up with new releases {"\n"} 
         from your favorite artist and genres.
       </div>
-      <div className="flex justify-evenly h-fit items-center w-80">
+      <div className="flex justify-evenly h-fit items-center w-80 ml-4">
         <img id="spotify" className="w-16 h-16" src="/white.jpg" alt="music"></img>
         <img id="apple" className="w-24 h-24 mt-1" src="/white.jpg" alt="apple"></img>
         <img id="tidal" className="w-20 h-20" src="/white.jpg" alt="tidal"></img>
