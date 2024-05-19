@@ -2,7 +2,7 @@ import firebase from 'firebase/compat/app';
 
 export const uiConfig = {
     signInFlow: 'popup',
-    signInSuccessUrl: '/',
+    signInSuccessUrl: '/home',
     tosUrl: '/terms-of-service',
     privacyPolicyUrl: '/privacy-policy',
     signInOptions: [

@@ -4,6 +4,12 @@ import { app, auth } from "../../firebase/clientApp";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { getFirestore, collection } from "firebase/firestore";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from 'react';
+import * as firebaseui from "firebaseui";
+import 'firebaseui/dist/firebaseui.css';
+import { uiConfig } from '../../firebase/firebaseAuth';
+import firebase from "firebase/compat/app";
+import { onAuthStateChanged } from "firebase/auth";
 
 
 export default function Home() {
@@ -14,7 +20,7 @@ export default function Home() {
     <div className="flex flex-col items-center w-full h-full space-y-20">
       <div className="flex justify-between w-[90%]">
         <div className="flex m-auto">
-          <img id="note" src="/white.jpg" className=" w-20 h-auto" alt="hello"/>
+          <img onClick={() => router.push("/")} id="note" src="/white.jpg" className=" w-20 h-auto hover:cursor-pointer" alt="hello"/>
           <button onClick={() => router.push("/")} id="header" className="poetsen-one-regular mt-4" >New Music Recs</button>
         </div>
       </div>

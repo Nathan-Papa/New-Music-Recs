@@ -11,8 +11,10 @@ const firebaseConfig = {
     storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+let app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-const auth = getAuth(app);
+let auth = getAuth(app);
 
-export { app, auth };
+let ui = new firebaseui.auth.AuthUI(auth);
+
+export { app, auth, ui };
